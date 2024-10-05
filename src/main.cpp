@@ -16,7 +16,7 @@ class account {
             cout << balance;
         }
 
-        void addMoney(){
+        void deposit(){
             float money;
 
             cout << "Enter the amount of money:";
