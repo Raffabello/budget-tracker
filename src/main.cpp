@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -6,12 +7,7 @@ class account {
     
     private:
         float balance;
-        string holder;
     public:
-
-        account(string name) : holder(name) {};
-        
-
         void getBalance(){
             cout << balance;
         }
@@ -23,6 +19,33 @@ class account {
             cin >> money;
             balance += money;
         }
+
+        void accountCreation() {
+            string tmpName;
+            string tmpPin;
+
+            count << "Enter your name:" << endl;
+            cin >> tmpName;
+            while(tmpName.lenght == 0) {
+                cout << "Your name cannot be empty, re-enter your name:" << endl;
+                cin >> tmpName;
+            }
+            cout << "Enter a pin to protect your budged:" << endl;
+            cin >> tmpPin;
+            if(tmpPin.lenght > 5) {
+                cout << "Pin is too long" << endl;
+            }
+
+            Person(tmpName,tmpPin);
+        }
+};
+
+class Person {
+    public:
+        string name;
+        int pin;
+        
+        Person(string n) : name(n) {};
 };
 
 void displayMenu(){
@@ -56,6 +79,7 @@ void budgetInit(){
 }
 
 int main(void){
+
 
     return 0;
 }
