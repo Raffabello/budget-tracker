@@ -6,12 +6,7 @@ class account {
     
     private:
         float balance;
-        string holder;
     public:
-
-        account(string name) : holder(name) {};
-        
-
         void getBalance(){
             cout << balance;
         }
@@ -26,6 +21,7 @@ class account {
 };
 
 int main(void){
+
 
     return 0;
 }
