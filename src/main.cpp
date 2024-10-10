@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -18,6 +19,14 @@ class account {
             cin >> money;
             balance += money;
         }
+};
+
+class Person {
+    public:
+        string name;
+        int pin;
+        
+        //Person(string n) : name(n) {};
 };
 
 int main(void){
